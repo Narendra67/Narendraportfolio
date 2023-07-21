@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Page</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: aquamarine;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    .form-group input[type="text"], .form-group textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .form-group textarea {
+      height: 100px;
+    }
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript code
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      // Perform form validation
+      if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      // Perform further processing (e.g., send data to server, display success message, etc.)
+      alert('Form submitted successfully');
+      document.getElementById('contact-form').reset();
+    });
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
+<!--  1. Html, css
+              The dynamic duo for creating beautiful and interactive webpages.
+
+2. Javascript
+The language that adds interactivity and functionality to webpages effortlessly.
+3. Bootstrap
+A powerful front-end framework for building responsive, mobile-first websites with ease and efficiency.
+4. React
+A popular JavaScript library for building efficient and scalable user interfaces with reusable components and virtual DOM            -->
